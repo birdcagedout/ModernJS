@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>디버그 테스트</title>
+</head>
+<body>
+	<div id="counter">0</div>
+	<button id="increase">+</button>
+	<button id="decrease">-</button>
+	<script>
+		// 자바스크립트
+		const $counter = document.getElementById('counter');		// 에러 코드
+		const $increase = document.getElementById('increase');
+		const $decrease = document.getElementById('decrease');
+
+		let num = 0;
+		const render = function() {
+			$counter.innerHTML = num;
+		}
+
+		$increase.onclick = function () {
+			num++;
+			console.log('increase button cliked');
+			render();
+		}
+
+		$decrease.onclick = function() {
+			num--;
+			console.log('decrease button clicked');
+			render();
+		}
+	</script>
+</body>
+</html>
