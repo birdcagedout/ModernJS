@@ -32,8 +32,9 @@ console.log(person.age);
 console.log(person['korean-age']);
 
 
-
+// 객체의 프라퍼티(메소드 포함) 삭제
 delete person.family;
 delete person.sayHello;
 delete person['korean-age'];
-console.log(person);
+
+console.log(person);                      
